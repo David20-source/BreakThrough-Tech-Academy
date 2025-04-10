@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - BreakThrough Tech Academy</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+    <header>
+        <nav>
+            <h2>BreakThrough Tech Academy</h2>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button id="darkModeToggle">Dark Mode</button>
+        </nav>
+    </header>
+
+    <section class="contact-form">
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+            <input type="text" id="name" name="name" placeholder="Full Name" autocomplete="name" required>
+            <input type="email" id="email" name="email" placeholder="Email" autocomplete="email" required>
+            <input type="text" id="subject" name="subject" placeholder="Subject" autocomplete="off" required>
+            <textarea id="message" name="message" placeholder="Message" autocomplete="off" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+        <p id="successMessage">Thank you! Your message has been sent.</p>
+        <a href="https://wa.me/256781182967" target="_blank" rel="noopener">Contact us on WhatsApp</a>
+    </section>
+    <script defer src="script.js"></script>
+</body>
+</html>

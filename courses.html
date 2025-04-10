@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses - BreakThrough Tech Academy</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <h2>BreakThrough Tech Academy</h2>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+         <button id="darkModeToggle">Dark Mode</button>
+        </nav>
+    </header>
+
+    <section class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search for a course..." onkeyup="filterCourses()">
+    </section>
+
+    <section class="course-list">
+        <div class="course" data-name="Web Development">
+            <h3>Web Development</h3>
+            <p>Duration: 12 Weeks</p>
+            <button onclick="openEnrollmentForm('Web Development')">Enroll</button>
+        </div>
+        <div class="course" data-name="Python Programming">
+            <h3>Python Programming</h3>
+            <p>Duration: 10 Weeks</p>
+            <button onclick="openEnrollmentForm('Python Programming')">Enroll</button>
+        </div>
+        <div class="course" data-name="Data Science">
+            <h3>Data Science</h3>
+            <p>Duration: 14 Weeks</p>
+            <button onclick="openEnrollmentForm('Data Science')">Enroll</button>
+        </div>
+    </section>
+
+    <!-- Enrollment Form -->
+    <section id="enrollmentForm" class="hidden">
+        <h3>Enroll in <span id="courseName"></span></h3>
+        <form onsubmit="saveEnrollment(event)">
+            <input type="text" id="studentName" placeholder="Your Name" required>
+            <input type="email" id="studentEmail" placeholder="Your Email" required>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-item">
+            <h4 onclick="toggleFAQ(this)">What is the duration of the courses?</h4>
+            <p class="faq-answer hidden">Each course varies in duration from 10 to 14 weeks.</p>
+        </div>
+        <div class="faq-item">
+            <h4 onclick="toggleFAQ(this)">Do I need prior experience?</h4>
+            <p class="faq-answer hidden">No prior experience is required for most courses.</p>
+        </div>
+        <div class="faq-item">
+            <h4 onclick="toggleFAQ(this)">What courses are offered?</h4>
+            <p class="faq-answer">We offer courses in programming, web development, data science, and more.</p>
+        </div>
+    </section>
+</body>
+</html>

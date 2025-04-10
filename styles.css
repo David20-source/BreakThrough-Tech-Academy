@@ -1,0 +1,532 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #222;
+    color: #fff;
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0073e6;
+    color: white;
+    padding: 15px 30px;
+}
+
+nav h2 {
+    font-size: 24px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Dark Mode Button */
+#darkModeToggle {
+    background: none;
+    border: 2px solid white;
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+#darkModeToggle:hover {
+    background: white;
+    color: #0073e6;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+    background: url('images/heroimg.jpg') no-repeat center center/cover;
+    color: black;
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.hero .btn {
+    display: inline-block;
+    background: #00e613;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.hero .btn:hover {
+    background: #06fa6c;
+}
+/* About Section Styles */
+.about {
+    background: linear-gradient(145deg, #0073e6, #005bb5); /* Smooth gradient background */
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+    max-width: 1000px;
+    margin: 40px auto;
+    border-radius: 15px; /* Rounded corners for modern look */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Deeper shadow for more depth */
+    position: relative;
+    overflow: hidden; /* To hide any overflowing elements */
+    transition: all 0.3s ease-in-out;
+}
+
+/* Adding subtle animation effect */
+.about:hover {
+    transform: translateY(-10px); /* Hover effect to lift the section */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2); /* More intense shadow on hover */
+}
+
+.about-content {
+    z-index: 1; /* Ensure content is on top of gradient */
+}
+
+.about h2 {
+    font-size: 36px;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    margin-bottom: 15px;
+    text-transform: uppercase; /* Makes the title stand out */
+    letter-spacing: 2px; /* Adds spacing between letters for a cleaner look */
+    transition: color 0.3s ease;
+}
+
+.about p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #e0e0e0;;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-top: 10px;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Adding a subtle underline animation to the heading */
+.about h2::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #fff;
+    margin: 20px auto;
+    transition: width 0.3s ease;
+}
+
+.about:hover h2::after {
+    width: 100px; /* Increases the width of the underline on hover */
+}
+
+/* Adding a small background accent behind the section */
+.about::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120%;
+    height: 120%;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    z-index: 0;
+    animation: pulse 3s infinite ease-in-out;
+}
+
+/* Pulse animation for background accent */
+@keyframes pulse {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.1);
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+/* Featured Courses */
+.featured-courses {
+    text-align: center;
+    padding: 40px;
+}
+
+.featured-courses h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.course-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.course {
+    background: violet;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    transition: transform 0.3s;
+}
+
+.course:hover {
+    transform: translateY(-5px);
+}
+
+.course img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.course h3 {
+    margin: 10px 0;
+}
+
+.course p {
+    font-size: 14px;
+    color: blue;
+}
+
+/* Testimonials */
+.testimonials {
+    text-align: center;
+    padding: 40px;
+    background: #b4adad;
+}
+
+#testimonial-container {
+    font-size: 18px;
+    font-style: italic;
+    padding: 20px;
+    background: rgb(192, 226, 43);
+    display: inline-block;
+    border-radius: 8px;
+}
+/* Enrollment Form */
+#enrollmentForm {
+    text-align: center;
+    padding: 20px;
+    background: white;
+    margin: 20px auto;
+    width: 300px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(233, 11, 48, 0.1);
+}
+
+#enrollmentForm input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #0073e6;
+    border-radius: 5px;
+}
+
+#enrollmentForm button {
+    background: #0073e6;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+#enrollmentForm button:hover {
+    background: #005bb5;
+}
+
+/* FAQ Section */
+.faq {
+    padding: 20px;
+    max-width: 600px;
+    margin: auto;
+}
+
+.faq h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.faq-item {
+    background: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+}
+
+.faq-item h4 {
+    cursor: pointer;
+    margin: 0;
+    padding: 10px;
+    background-color: #0073e6;
+    color: white;
+    border-radius: 5px;
+}
+
+.faq-item h4:hover {
+    background-color: #005bb5;
+}
+
+.faq-answer {
+    display: none; /* Initially hidden */
+    padding: 10px;
+    border-top: 1px solid #ddd;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    overflow: hidden;
+    max-height: 0; /* Initially set to 0 */
+}
+
+.faq-answer.expanded {
+    display: block;
+    max-height: 1000px; /* Arbitrary large value to allow expansion */
+    padding: 10px;}
+
+/* Optional smooth transition */
+.faq-answer {
+    transition: all 0.3s ease;
+}
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #0073e6;
+    color: white;
+    margin-top: 20px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Courses Page */
+.search-bar {
+    text-align: center;
+    padding: 20px;
+}
+
+.search-bar input {
+    padding: 10px;
+    width: 60%;
+    border: 2px solid #0073e6;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.course-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.course-list .course {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    text-align: center;
+}
+
+.course-list .course button {
+    background: #0073e6;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.course-list .course button:hover {
+    background: #005bb5;
+}
+
+/* Contact Page */
+.contact-form {
+    max-width: 500px;
+    margin: auto;
+    text-align: center;
+    padding: 40px;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #0073e6;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    background: #0073e6;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.contact-form button:hover {
+    background: #005bb5;
+}
+
+/* WhatsApp Button */
+.contact-form a {
+    display: inline-block;
+    margin-top: 10px;
+    background: #25D366;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.contact-form a:hover {
+    background: #1EBE5D;
+}
+/* Success Message */
+#successMessage {
+    display: none; /* Hide success message by default */
+    color: green;
+    font-weight: bold;
+    margin-top: 15px;
+}
+/* 🌙 Dark Mode for Courses Page */
+body.dark-mode .course-list .course {
+    background-color: #333;
+    color: #fff;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .search-bar input {
+    background-color: #1e1e1e;
+    color: #fff;
+    border: 2px solid #555;
+}
+
+body.dark-mode .course-list .course button {
+    background-color: #444;
+    color: #fff;
+    border: 1px solid #777;
+}
+
+body.dark-mode .course-list .course button:hover {
+    background-color: #666;
+}
+
+body.dark-mode .search-bar {
+    background-color: #1a1a1a;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  /* ... */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        padding: 10px 0;
+    }
+
+    .hero {
+        padding: 30px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+    .about {
+        padding: 30px 15px;
+    }
+
+    .about h2 {
+        font-size: 24px;
+    }
+
+    .about p {
+        font-size: 16px;
+    }
+
+    .course-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .search-bar input {
+        width: 90%;
+    }
+
+    .contact-form {
+        padding: 20px;
+    }
+}
